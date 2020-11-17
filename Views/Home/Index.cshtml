@@ -1,0 +1,180 @@
+﻿@model WiseBet.Models.DBkeeper
+
+
+@{
+    ViewBag.Title = "WiseBet";
+}
+
+
+<!--====== HOW IT WORKS START ======-->
+<section id="how" class="services-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="section-title text-center pb-40">
+                    <div class="line m-auto"></div>
+                    <h3 class="title">Our knowledge + Your experience, <span> Together</span></h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="services-icon">
+                        <img class="shape" src="images/ppl.png" alt="people">
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">Your Experience</a></h4>
+                        <p class="text">Share your lucky numbers, your experience and method of winning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="services-icon">
+                        <img class="shape" src="images/statistics.png" alt="shape">
+                    </div>
+                    <div class="services-content mt-30">
+                        <h4 class="services-title"><a href="#">Our Knowledge</a></h4>
+                        <p class="text">We use our knowledge to analyze the data, and guess the winning numbers.</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!--====== HOW IT WORKS ENDS ======-->
+<!--====== GENERATOR START ======-->
+<section id="chances" class="generator-area pt-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="generator-content mt-70 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Check My Chances </h3>
+                        <h4 class="title"><span>Check your winning numbers</span></h4>
+                    </div> <!-- section title -->
+                    <p class="text">Pick 6 Numbers</p>
+                    <div class="btn-group-toggle" data-toggle="buttons" id="selection">
+                        @for (var i = 1; i <= 37; i++)
+                        {
+                            <label class="btn numbers-choose" data-toggle="tooltip" title="Commonness: @Model.numAppearance[i]">
+                                <input value="@Model.numAppearance[i]" type="checkbox" name="cbNumbers"> @i
+                            </label>
+                        }
+                        <br />
+                        <p class="text">Pick Strong Number</p>
+                        @for (var i = 1; i <= 7; i++)
+                        {
+                            <label class="btn numbers-choose" data-toggle="tooltip" title="Commonness: @Model.strongArray[i]">
+                                <input value="@Model.strongArray[i]" id="@i" type="checkbox" name="cbStrong"> @i
+                            </label>
+                        }
+                    </div>
+
+                    <div id="chancesResult" class="hidden">
+                        <h4><label id="lblRes">test</label> </h4>
+                        <input type="button" class="main-btn" id="btnchancesResult" name="btnchancesResult" value="Try Again" />
+                    </div>
+                    <p></p>
+                    <div id="btnCheck">
+                        <input type="button" class="main-btn" id="checkChances" name="checkChances" value="Check Chances" />
+                    </div>
+
+                </div> <!-- content -->
+            </div>
+            <div class="col-lg-6">
+                <div class="generator-image text-center mt-30 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <img src="images/lotteryballs.png" alt="lottery balls">
+                </div> <!-- image -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!--====== GENERATOR ENDS ======-->
+<!--====== Statistics START ======-->
+<section id="statistics" class="generator-area pt-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="generator-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <div class="line"></div>
+                        <h3 class="title">Statistics</h3>
+                    </div> <!-- section title -->
+
+
+                </div> <!-- content -->
+
+            </div>
+            <canvas id="myChart"></canvas>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!--====== Statistics ENDS ======-->
+<!--====== ABOUT START ======-->
+<section id="about" class="about-area pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="section-title text-center pb-30">
+                    <div class="line m-auto"></div>
+                    <h3 class="title"><span>About</span> WiseBet Developers</h3>
+                </div> <!-- section title -->
+            </div>
+        </div> <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-about text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="about-image">
+                        <img src="images/ron.jpg" alt="ron">
+                    </div>
+                    <div class="about-content">
+                        <h5 class="holder-name"><a href="#">Ron Raifer</a></h5>
+                        <p class="text">Software Engineer Student</p>
+                    </div>
+                </div> <!-- single team -->
+            </div>
+            <div class="col-lg-4 col-md-7 col-sm-8">
+                <div class="single-about text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="about-image">
+                        <img src="images/mati.jpg" alt="mati">
+                    </div>
+                    <div class="about-content">
+                        <h5 class="holder-name"><a href="#">Mati Halfa</a></h5>
+                        <p class="text">Software Engineer Student</p>
+                    </div>
+                </div> <!-- single team -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</section>
+<!--====== ABOUT ENDS ======-->
+<!--====== CONTACT START ======-->
+<section id="contact" class="generator-area pt-90">
+    <div class="container">
+        <div class="contact-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-content mt-45">
+                        <h2 class="contact-title">Contact Us <span>Communication is important!</span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form mt-50">
+                        <form action="#">
+                            <input type="text" placeholder="Name*">
+                            <input type="email" placeholder="E-mail*">
+                            <input type="text" placeholder="Phone">
+                            <textarea name="content" placeholder="Content*"></textarea>
+                        </form>
+
+                    </div>
+                    <button class="main-btn">Send</button>
+                </div>
+            </div> <!-- row -->
+        </div>
+    </div> <!-- container -->
+</section>
+<!--====== CONTACT ENDS ======-->

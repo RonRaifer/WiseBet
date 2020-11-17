@@ -1,0 +1,28 @@
+<?xml version ="1.0" encoding="UTF-8" standalone="yes"?>
+<lottery-data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<lottery>
+		<id>12123</id>
+		<date>1/1/2019</date>
+		<num1>3</num1>
+		<num2>5</num2>
+		<num3>2</num3>
+		<num4>1</num4>
+		<num5>8</num5>
+		<num6>23</num6>
+		<strong>3</strong>
+	</lottery>
+	
+	<lottery>
+		<id>1223</id>
+		<date>2/2/2019</date>
+		<num1>3</num1>
+		<num2>5</num2>
+		<num3>2</num3>
+		<num4>1</num4>
+		<num5>8</num5>
+		<num6>23</num6>
+		<strong>3</strong>
+	</lottery>
+
+</lottery-data>
