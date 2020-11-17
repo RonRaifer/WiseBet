@@ -1,6 +1,7 @@
 # User-specific files
 *.suo
 *.user
+*.ps1 linguist-vendored
 
 # Others
 *.Cache
