@@ -1,7 +1,6 @@
-# User-specific files
-*.suo
-*.user
-*.ps1 linguist-vendored
-
-# Others
-*.Cache
+*.cs linguist-detectable=true  
+*.java linguist-detectable=false  
+*.js linguist-detectable=false  
+*.html linguist-detectable=false  
+*.xml linguist-detectable=false 
+*.asm linguist-detectable=false 
