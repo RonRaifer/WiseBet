@@ -1,3 +1,6 @@
-*.css linguist-detectable=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
+# User-specific files
+*.suo
+*.user
+
+# Others
+*.Cache
