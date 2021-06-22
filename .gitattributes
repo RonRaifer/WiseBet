@@ -1,9 +1,0 @@
-*.cs linguist-detectable=true 
-*.css linguist-detectable=false  
-*.js linguist-detectable=false  
-*.html linguist-detectable=false  
-*.xml linguist-detectable=false 
-
-*.cs diff=csharp
-*.csproj merge=union
-*.sln merge=union
